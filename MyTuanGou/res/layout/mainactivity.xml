@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="fill_parent" android:background="#F2FAB4">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/topbar"
+		android:padding="10dip" android:orientation="horizontal">
+		<TextView android:textColor="@color/white" android:textSize="20dip"
+			android:text="北京" android:id="@+id/city_text" android:gravity="center_vertical|center"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/top_title" android:layout_toLeftOf="@+id/city"></TextView>
+		<Button android:background="@drawable/menu_top_bt" android:id="@+id/city"
+			android:textColor="@color/white" android:layout_width="wrap_content"
+			android:text="@string/city" android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/city_text"
+			android:layout_centerHorizontal="true"></Button>
+		<TextView android:textColor="@color/white" android:textSize="15dip"
+			android:text="@string/top_title" android:id="@+id/top_title"
+			android:gravity="center_vertical|center" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_centerVertical="true"
+			android:layout_alignParentLeft="true"></TextView>
+	</RelativeLayout>
+	<ListView android:id="@+id/listview" android:layout_width="match_parent"
+		android:layout_height="380dip" android:cacheColorHint="#F2FAB4"
+		android:layout_weight="1"></ListView>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/topbar" android:layout_gravity="bottom">
+		<Button android:id="@+id/meituan" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/menu_button_bt"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:text="@string/meituan" android:textSize="15dip"
+			android:paddingBottom="10dip" android:paddingTop="10dip" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:src="@drawable/detail_divide_line" />
+		<Button android:id="@+id/lashou" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/menu_button_bt"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:text="@string/lashou" android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:textSize="15dip" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:src="@drawable/detail_divide_line" />
+		<Button android:id="@+id/ftuan" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/menu_button_bt"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:text="@string/ftuan" android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:textSize="15dip" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:src="@drawable/detail_divide_line" />
+		<Button android:id="@+id/nuomi" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/menu_button_bt"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:text="@string/nuomi" android:paddingTop="10dip"
+			android:paddingBottom="10dip" android:textSize="15dip" />
+	</LinearLayout>
+
+</LinearLayout>

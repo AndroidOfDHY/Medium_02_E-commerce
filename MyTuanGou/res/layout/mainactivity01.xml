@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="@color/white">
+	<LinearLayout android:orientation="horizontal"
+		android:padding="10dip" android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:background="@drawable/topbar"
+		android:gravity="center_vertical|center_horizontal">
+		<TextView android:id="@+id/website" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="center"
+			android:textSize="20dip" android:textColor="@color/white" />
+	</LinearLayout>
+	<LinearLayout android:gravity="center_vertical"
+		android:orientation="horizontal" android:background="@drawable/bg_detail_top"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:id="@+id/price" android:layout_width="wrap_content"
+			android:layout_height="match_parent" android:textColor="@color/white"
+			android:paddingLeft="5dip" android:paddingRight="20dip"
+			android:textStyle="bold" android:textSize="20dip"
+			android:background="@drawable/bg_detail_tuan_price" />
+		<LinearLayout android:gravity="center_horizontal"
+			android:layout_gravity="center_vertical" android:orientation="vertical"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="40.0dip">
+			<TextView android:textSize="12.0dip" android:textColor="#ff000000"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="原价" />
+			<TextView android:textColor="#ff000000" android:id="@+id/value"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:layout_marginLeft="10.0dip"
+			android:src="@drawable/detail_divide_line" />
+		<LinearLayout android:gravity="center_horizontal"
+			android:layout_gravity="center_vertical" android:orientation="vertical"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="10.0dip">
+			<TextView android:textSize="12.0dip" android:textColor="#ff000000"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="折扣" />
+			<TextView android:textColor="#ffffcc33" android:id="@+id/rebate"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:layout_marginLeft="10.0dip"
+			android:src="@drawable/detail_divide_line" />
+		<LinearLayout android:gravity="center_horizontal"
+			android:layout_gravity="center_vertical" android:orientation="vertical"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="10.0dip">
+			<TextView android:textSize="12.0dip" android:textColor="#ff000000"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="节省" />
+			<TextView android:textColor="#ff000000" android:id="@+id/save_price"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<ScrollView android:layout_height="360dip"
+		android:layout_weight="1" android:layout_width="match_parent"
+		android:layout_gravity="center_horizontal" android:background="@color/white">
+
+		<LinearLayout android:orientation="vertical"
+			android:paddingLeft="10.0dip" android:paddingRight="10.0dip"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="4.0dip">
+			<LinearLayout android:orientation="vertical"
+				android:paddingRight="10.0dip" android:paddingLeft="10.0dip"
+				android:background="@drawable/bg_commnet_bottom"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="5px">
+				<ImageView android:id="@+id/image" android:layout_width="250dip"
+					android:layout_height="150dip" android:layout_marginTop="10dip"
+					android:background="@drawable/none_detail" android:padding="5px"
+					android:layout_gravity="center_horizontal" android:scaleType="fitXY" />
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:gravity="right|center_vertical">
+					<TextView android:id="@+id/sales_num" android:textColor="@color/white"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:gravity="right|center_vertical" android:background="@drawable/bt_back" />
+				</LinearLayout>
+				<TextView android:id="@+id/deal_desc" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:textSize="15dip"
+					android:textColor="@color/black" android:layout_marginLeft="20dip"
+					android:layout_marginRight="20dip" />
+
+				<LinearLayout android:orientation="horizontal"
+					android:background="@drawable/bg_list_item_bottom"
+					android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:gravity="center">
+
+					<TextView android:id="@+id/start_time" android:textSize="10dip"
+						android:layout_marginLeft="5dip" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@color/black" />
+
+					<TextView android:text="—" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@color/black" />
+
+					<TextView android:id="@+id/end_time" android:layout_width="wrap_content"
+						android:textSize="10dip" android:layout_height="wrap_content"
+						android:textColor="@color/black" />
+
+					<TextView android:id="@+id/last_time"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:textColor="@color/red" android:layout_marginLeft="15px" />
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="match_parent" android:layout_height="wrap_content">
+
+				<Button android:id="@+id/buy" android:text="@string/buy"
+					android:textColor="@color/white" android:background="@drawable/button_bt"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1" android:layout_margin="10px"
+					android:textSize="15dip" />
+
+				<Button android:id="@+id/fav" android:text="@string/fav"
+					android:textColor="@color/white" android:background="@drawable/button_bt"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_weight="1" android:layout_margin="10px"
+					android:textSize="15dip" />
+			</LinearLayout>
+
+			<LinearLayout android:orientation="vertical"
+				android:padding="20dip" android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<Button android:id="@+id/share_deal" android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:background="@drawable/share_bg_button"
+					android:textSize="15dip" android:text="@string/share"
+					android:textColor="@color/white" android:padding="5dip" />
+			</LinearLayout>
+
+			<LinearLayout android:orientation="vertical" 
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:layout_marginBottom="10dip">
+				<TextView android:layout_width="match_parent" android:id="@+id/deal_tips_text"
+					android:layout_height="wrap_content" android:background="@drawable/bg_siteinfo_title"
+					android:text="@string/deal_tips" android:paddingLeft="25dip"
+					android:textSize="12dip" android:gravity="center_vertical"
+					android:textColor="@color/juhuang" />
+				<TextView android:layout_width="match_parent" android:id="@+id/deal_tips"
+					android:layout_height="wrap_content" android:textSize="15dip"
+					android:textColor="@color/black" android:padding="5dip" 
+					android:background="@drawable/bg_commnet_bottom"/>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical" 
+				android:layout_width="match_parent" android:layout_height="wrap_content">
+				<TextView android:layout_width="match_parent" android:id="@+id/shopsList_text"
+					android:layout_height="wrap_content" android:background="@drawable/bg_siteinfo_title"
+					android:text="@string/shops_details" android:paddingLeft="25dip"
+					android:textSize="12dip" android:textColor="@color/juhuang"
+					android:gravity="center_vertical" />
+				<ListView android:id="@+id/shopsList" android:layout_width="match_parent"
+					android:cacheColorHint="#F2FAB4" android:layout_height="400dip"
+					android:background="@drawable/bg_commnet_bottom" android:padding="5dip"></ListView>
+			</LinearLayout>
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:background="@drawable/topbar">
+
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/back"
+			android:background="@drawable/menu_button_bt" android:text="@string/back"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:textSize="15dip" android:paddingTop="10dip"
+			android:paddingBottom="5dip" />
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:src="@drawable/detail_divide_line" />
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/collect"
+			android:background="@drawable/menu_button_bt" android:text="@string/collect"
+			android:textColor="@color/white" android:layout_weight="1"
+			android:textSize="15dip" android:paddingTop="10dip"
+			android:paddingBottom="5dip" />
+	</LinearLayout>
+
+</LinearLayout>
+
+	
